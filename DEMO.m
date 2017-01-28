@@ -58,11 +58,11 @@ samplesfile = sprintf('samples/%s_%s_D_%d.mat', data.name, model, data.stan_inpu
 save(samplesfile, 'samples', '-v7.3');
 load(samplesfile);
 
-A_expectation = amat(samples.f);
+A_expectation = amat(samples.f);    % Expectation of the adjacency matrix A, which can be derived directly from f.
 
 A_data = adj_mat - 1;
 A_data(find(w)) = 0.5;
-A_data(find(eye(M))) = 1;
+A_data(find(eye(M))) = 1;           % The data matrix, polished for visualization.
 
 figure; 
 subplot 121;
