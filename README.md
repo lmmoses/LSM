@@ -13,7 +13,7 @@ Please note that Stan outputs temporary files to store the HMC samples. The way 
 The following Stan models are available:
 
 1. The core LSM (lsm.stan).
-2. The LSM extended with random effects for sources and targets (lsm_directionaleffects.stan).
+2. The LSM extended with random effects for sources and targets (lsm_directionaleffects.stan). This is the model around which [1] centers.
 3. The LSM for datafusion, combining two input connectivity matrices (lsm_directionaleffects_datafusion.stan).
 4. A model with only the random effects (directionaleffects.stan).
 5. A model with only the random effects, combining two input connectivity matrices (directionaleffects_datafusion.stan).
@@ -25,10 +25,8 @@ The core Matlab script is sampler.m. Examples of how to use this script are show
 
 1. Collecting, thinning and storing the HMC samples.
 2. Monitoring convergence using the Potential Scale Reduction Factor (PSRF) measure. Depending on user settings, the sampler will automatically restart itself with more iterations if convergence has not been achieved. The default threshold for the PSRF is 1.1 (applied to *all* elements of the indicated variables). Which variables must be monitored for convergence is a user-supplied parameter.
-3. Training on hold-out data. If a fold number f is provided, the sampler will train on all edges with fold index ~f. This is used in evaluating performance of the model, by looking at the error in recovery of the connections with label f. Fold labels must be defined a priori for each data set and are stored in /data/xfolds/\<dataset_name\>_folds.mat.
 
-In the DEMO.m script, *jobs* are constructed, containing the dataset, model and required parameters. This allows different runs to be trivially parallelized using the Matlab *parfor* construct.
-
+In the DEMO.m script, a latent space model is estimated for the Felleman & van Essen macaque visual cortex data set, with latent dimensionality D=2. 
 
 
 ## References
