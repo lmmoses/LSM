@@ -31,5 +31,5 @@ In the DEMO.m script, a latent space model is estimated for the Felleman & van E
 
 ## References
 
-[1] Max Hinne, Annet Meijers, Rembrandt Bakker, Paul Tiesinga, Morten Mørup and Marcel van Gerven, 2017. The Missing Link: Predicting Connectomes from Noisy and Partially Observed Tract Tracing Data. PLoS Computational Biology.
-[2] Brooks, S.P. and Gelman, A. (1998) General methods for monitoring convergence of iterative simulations. Journal of Computational and Graphical Statistics. 7, 434-455. 
+1. Max Hinne, Annet Meijers, Rembrandt Bakker, Paul Tiesinga, Morten Mørup and Marcel van Gerven, 2017. The Missing Link: Predicting Connectomes from Noisy and Partially Observed Tract Tracing Data. PLoS Computational Biology.
+2. Brooks, S.P. and Gelman, A. (1998) General methods for monitoring convergence of iterative simulations. Journal of Computational and Graphical Statistics. 7, 434-455. 
